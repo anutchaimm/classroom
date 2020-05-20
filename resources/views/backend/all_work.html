@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classroom</title>
+
+    <!-- Css Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+
+    <!-- owl_carousel -->
+    <link rel="stylesheet" href="lib/owl_carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/owl_carousel/assets/owl.theme.default.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+</head>
+
+<body id="dashboard">
+
+    <div class="wrapper">
+
+        <!------------------------- Sidebar ------------------------->
+        <nav id="sidebar" class="overflow-auto">
+            <div class="sidebar-header text-center">
+                <h5><i class="fas fa-book-open"></i> Classroom</h5>
+            </div>
+            <ul class="list-unstyled components">
+                <li class="active list">
+                    <a href="control.html"><i class="fa fa-home pr-2"></i> Classroom</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown ">
+                        <i class="fas fa-book pr-2"></i> My Classroom</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">การพัฒนาเว็บ PHP</a>
+                        </li>
+                        <li>
+                            <a href="#">Programming</a>
+                        </li>
+                        <li>
+                            <a href="#">การพัฒนาเว็บไซต์ HTML & CSS</a>
+                        </li>
+                        <li>
+                            <a href="#">โครงการ</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list">
+                    <a href="profile.html"><i class="fas fa-portrait pr-2"></i> Profile</a>
+                </li>
+                <li class="list">
+                    <a href="#"><i class="fas fa-sign-out-alt pr-2"></i> Logout</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div id="content">
+            <!------------------------- Navbar ------------------------->
+            <nav class="navbar navbar-expand-lg sticky-top">
+                <div class="container-fluid">
+
+                    <div id="sidebarCollapse" class="d-none d-lg-block">
+                        <div class="iconbar">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <a class="navbar-brand pl-2 font-weight-bold" href="control.html">My Classroom</a>
+
+                    <div class="row  d-xl-none d-lg-none">
+                        <div class="col">
+                            <img src="images/img1.jpg" class="avatar" alt="Avatar">
+                        </div>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <!--
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#"><i class="fa fa-bell pt-1"></i></a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#"><i class="fa fa-envelope pt-1"></i></a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-globe pt-1"></i>
+                                    <span class="pl-2">Thailand</span>
+                                </a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#" data-toggle="modal" data-target="#NewClassroom">
+                                    <i class="fas fa-plus fa-lg pt-2 pr-2"></i>
+                                    New Classroom</a>
+                            </li>
+                            <li class="nav-item mr-3 pt-1">
+                                <a class="nav-link" href="#" data-toggle="modal" data-target="#JoinClassroom">
+                                    <i class="fas fa-sign-in-alt fa-lg pr-2"></i>
+                                    Join Classroom</a>
+                            </li>
+                                                        -->
+                            <li class="nav-item mr-3 pt-1">
+                                <a class="nav-link active" href="room.html">
+                                    <i class="fas fa-graduation-cap pr-2"></i>
+                                    Strem</a>
+                            </li>
+                            <li class="nav-item mr-3 pt-1">
+                                <a class="nav-link" href="schedule.html">
+                                    <i class="fas fa-list-ul pr-2"></i>
+                                    Schedule</a>
+                            </li>
+                            <li class="nav-item mr-3 pt-1">
+                                <a class="nav-link" href="leaderboard.html">
+                                    <i class="fas fa-chart-line pr-2"></i>
+                                    LeaderBoard</a>
+                            </li>
+                            <li class="nav-item mr-3 pt-1">
+                                <a class="nav-link" href="pairing.html">
+                                    <i class="far fa-heart pr-2"></i>
+                                    Paring</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-avatar" href="#" role="button" id="navbarDropdown"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="images/img1.jpg" class="avatar" alt="Avatar">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right animate slideIn border-0 shadow w-100 mt-2 bg-theme"
+                                    aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#"><i class="fas fa-cog pr-2"></i> Setting</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt pr-2"></i>
+                                        Logout</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!--
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-xl-8"></div>
+                    <div class="col-xl-4">
+                        <div class="text-right">
+                            <div class="custom-control custom-switch theme-switch">
+                                <input type="checkbox" class="custom-control-input" id="checkbox">
+                                <label class="custom-control-label text-theme" for="checkbox">Dark Mode</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        -->
+
+            <!------------------------- Content ------------------------->
+            <div class="container mt-4 mb-4 pb-4">
+                <img class="bg-dashboard" src="images/Rectangle/wave_2.svg" alt="">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row mb-3">
+                            <div class="col-lg-8">
+                                <a href="#" onclick="goBack()">
+                                    <i class="fas fa-arrow-left text-white fa-lg pr-2 mb-4"></i>
+                                </a>
+
+                                <!-- List Work -->
+
+                                <div class="card border-0 shadow-theme mb-5 profile-work">
+                                    <div class="position-relative">
+                                        <img class="card-img-top"
+                                            src="images/bg_card/etienne-bosiger-WTkUYzNCu-A-unsplash.jpg" alt="work-bg">
+                                        <img src="images/img1.jpg" class="avatar-allwork" alt="">
+                                        <span>Piyawat Loekthanom</span>
+                                    </div>
+                                    <div class="card-body">
+                                    </div>
+                                </div>
+
+                                <div class="card list-work border-0 mb-3 shadow-theme">
+                                    <div class="card-body p-0 p-2">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-8">
+                                                <h5 class="m-0 text-uppercase">
+                                                    <i class="fas fa-clipboard-list mr-1"></i>
+                                                    work 1 : dwaddwawd
+                                                </h5>
+                                            </div>
+                                            <div class="col-6 col-lg-2 mt-2">
+                                                <small class="m-0"><i class="far fa-clock"></i> 14 Jan</small>
+                                            </div>
+                                            <div class="col-6 col-lg-2 text-right mt-2">
+                                                <span class="badge badge-primary">10/10</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card list-work border-0  mb-3 shadow-theme">
+                                    <div class="card-body p-0 p-2">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-8">
+                                                <h5 class="m-0 text-uppercase">
+                                                    <i class="fas fa-clipboard-list mr-1"></i>
+                                                    work 1 : dwaddwawd
+                                                </h5>
+                                            </div>
+                                            <div class="col-6 col-lg-2 mt-2">
+                                                <small class="m-0"><i class="far fa-clock"></i> 14 Jan</small>
+                                            </div>
+                                            <div class="col-6 col-lg-2 text-right mt-2">
+                                                <span class="badge badge-primary">10/10</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card list-work border-0 mb-3 shadow-theme">
+                                    <div class="card-body p-0 p-2">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-8">
+                                                <h5 class="m-0 text-uppercase">
+                                                    <i class="fas fa-clipboard-list mr-1"></i>
+                                                    work 1 : dwaddwawd
+                                                </h5>
+                                            </div>
+                                            <div class="col-6 col-lg-2 mt-2">
+                                                <small class="m-0"><i class="far fa-clock"></i> 14 Jan</small>
+                                            </div>
+                                            <div class="col-6 col-lg-2 text-right mt-2">
+                                                <span class="badge badge-primary">10/10</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card list-work border-0 mb-3 shadow-theme">
+                                    <div class="card-body p-0 p-2">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-8">
+                                                <h5 class="m-0 text-uppercase">
+                                                    <i class="fas fa-clipboard-list mr-1"></i>
+                                                    work 1 : dwaddwawd
+                                                </h5>
+                                            </div>
+                                            <div class="col-6 col-lg-2 mt-2">
+                                                <small class="m-0"><i class="far fa-clock"></i> 14 Jan</small>
+                                            </div>
+                                            <div class="col-6 col-lg-2 text-right mt-2">
+                                                <span class="badge badge-primary">10/10</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card list-work border-0 mb-3 shadow-theme">
+                                    <div class="card-body p-0 p-2">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-8">
+                                                <h5 class="m-0 text-uppercase">
+                                                    <i class="fas fa-clipboard-list mr-1"></i>
+                                                    work 1 : dwaddwawd
+                                                </h5>
+                                            </div>
+                                            <div class="col-6 col-lg-2 mt-2">
+                                                <small class="m-0"><i class="far fa-clock"></i> 14 Jan</small>
+                                            </div>
+                                            <div class="col-6 col-lg-2 text-right mt-2">
+                                                <span class="badge badge-primary">10/10</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card list-work border-0 mb-3 shadow-theme">
+                                    <div class="card-body p-0 p-2">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-8">
+                                                <h5 class="m-0 text-uppercase">
+                                                    <i class="fas fa-clipboard-list mr-1"></i>
+                                                    work 1 : dwaddwawd
+                                                </h5>
+                                            </div>
+                                            <div class="col-6 col-lg-2 mt-2">
+                                                <small class="m-0"><i class="far fa-clock"></i> 14 Jan</small>
+                                            </div>
+                                            <div class="col-6 col-lg-2 text-right mt-2">
+                                                <span class="badge badge-primary">10/10</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <div class="card border-0 shadow-theme mb-4">
+                                    <div class="card-header bg-white">
+                                        <h4 class="m-0 text-theme">ผลงานชั้นเรียน</h4>
+                                    </div>
+                                    <div class="card-body mx-auto">
+                                        <div id="svgcontainer">
+                                            <svg height="300" width="300" id="svg">
+                                                <circle id="progressbg" cx="150" cy="150" r="120" stroke-width="29"
+                                                    fill="transparent" stroke-dasharray="753.9822368615503" />
+                                                <circle id="progress" cx="150" cy="150" r="120" stroke-width="30"
+                                                    fill="transparent" stroke-dasharray="753.9822368615503" />
+                                            </svg>
+                                            <div id="slidervalue"></div>
+                                        </div>
+                                        <input type="range" id="slider" min="0" max="100" value="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!------------------------- Footer ------------------------->
+            <footer class="p-3 d-none d-xl-block">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <small> Copyright © 2020 Classroom. </small>
+                        </div>
+                        <div class="col-xl-6 text-right">
+                            <small> Designed by Piyawat Loekthanom </small>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!------------------------- Moblie-bar ------------------------->
+
+            <div class="d-block d-lg-none moblie-bar p-2">
+                <div class="container-fluid text-center">
+                    <div class="row row-cols-5">
+                        <div class="col">
+                            <a class="list-moblie" href="control.html">
+                                <i class="fas fa-home"></i>
+                                <small class="d-block ">Home</small>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="room.html" class="list-moblie">
+                                <i class="fa fa-globe"></i>
+                                <small class="d-block">Strem</small>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="schedule.html" class="list-moblie">
+                                <i class="far fa-lightbulb"></i>
+                                <small class="d-block">Schedule</small>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="leaderboard.html" class="list-moblie">
+                                <i class="fas fa-clipboard-list"></i>
+                                <small class="d-block">Leader</small>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="pairing.html" class="list-moblie">
+                                <i class="fas fa-users"></i>
+                                <small class="d-block">Paring</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- owl_carousel core JavaScript -->
+    <script src="lib/owl_carousel/owl.carousel.min.js"></script>
+
+    <!-- Style core JavaScript -->
+    <script src="js/main.js"></script>
+
+    <!-- WOW -->
+    <script src="lib/wow/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classroom</title>
+
+    <!-- Css Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+
+    <!-- owl_carousel -->
+    <link rel="stylesheet" href="lib/owl_carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/owl_carousel/assets/owl.theme.default.min.css">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+</head>
+
+<body id="dashboard">
+
+    <div class="wrapper">
+
+        <!------------------------- Sidebar ------------------------->
+        <nav id="sidebar" class="overflow-auto">
+            <div class="sidebar-header text-center">
+                <h5><i class="fas fa-book-open"></i> Classroom</h5>
+            </div>
+            <ul class="list-unstyled components">
+                <li class="active list">
+                    <a href="control.html"><i class="fa fa-home pr-2"></i> Classroom</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown ">
+                        <i class="fas fa-book pr-2"></i> My Classroom</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">การพัฒนาเว็บ PHP</a>
+                        </li>
+                        <li>
+                            <a href="#">Programming</a>
+                        </li>
+                        <li>
+                            <a href="#">การพัฒนาเว็บไซต์ HTML & CSS</a>
+                        </li>
+                        <li>
+                            <a href="#">โครงการ</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list">
+                    <a href="profile.html"><i class="fas fa-portrait pr-2"></i> Profile</a>
+                </li>
+                <li class="list">
+                    <a href="#"><i class="fas fa-sign-out-alt pr-2"></i> Logout</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div id="content">
+            <!------------------------- Navbar ------------------------->
+            <nav class="navbar navbar-expand-lg sticky-top">
+                <div class="container-fluid">
+
+                    <div id="sidebarCollapse" class="d-none d-lg-block">
+                        <div class="iconbar">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <a class="navbar-brand pl-0 pl-lg-2 font-weight-bold" href="control.html">My Classroom</a>
+
+                    <div class="row  d-xl-none d-lg-none">
+                        <div class="col">
+                            <a href="profile.html">
+                                <img src="images/img1.jpg" class="avatar" alt="Avatar">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <!--
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#"><i class="fa fa-bell pt-1"></i></a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#"><i class="fa fa-envelope pt-1"></i></a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-globe pt-1"></i>
+                                    <span class="pl-2">Thailand</span>
+                                </a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#" data-toggle="modal" data-target="#NewClassroom">
+                                    <i class="fas fa-plus fa-lg pt-2 pr-2"></i>
+                                    New Classroom</a>
+                            </li>
+                            <li class="nav-item mr-3 pt-1">
+                                <a class="nav-link" href="#" data-toggle="modal" data-target="#JoinClassroom">
+                                    <i class="fas fa-sign-in-alt fa-lg pr-2"></i>
+                                    Join Classroom</a>
+                            </li>
+                                                        -->
+                            <li class="nav-item mr-3 pt-1">
+                                <a class="nav-link" href="room.html">
+                                    <i class="fa fa-globe fa-lg pr-2"></i>
+                                    Strem</a>
+                            </li>
+                            <li class="nav-item mr-3 pt-1">
+                                <a class="nav-link" href="schedule.html">
+                                    <i class="far fa-lightbulb fa-lg pr-2"></i>
+                                    Schedule</a>
+                            </li>
+                            <li class="nav-item mr-3 pt-1">
+                                <a class="nav-link" href="leaderboard.html">
+                                    <i class="fas fa-clipboard-list fa-lg pr-2"></i>
+                                    LeaderBoard</a>
+                            </li>
+                            <li class="nav-item mr-3 pt-1">
+                                <a class="nav-link" href="pairing.html">
+                                    <i class="fas fa-users fa-lg pr-2"></i>
+                                    Paring</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-avatar" href="#" role="button" id="navbarDropdown"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="images/img1.jpg" class="avatar" alt="Avatar">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right animate slideIn border-0 shadow w-100 mt-2 bg-theme"
+                                    aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#"><i class="fas fa-cog pr-2"></i> Setting</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt pr-2"></i>
+                                        Logout</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!--
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-xl-8"></div>
+                    <div class="col-xl-4">
+                        <div class="text-right">
+                            <div class="custom-control custom-switch theme-switch">
+                                <input type="checkbox" class="custom-control-input" id="checkbox">
+                                <label class="custom-control-label text-theme" for="checkbox">Dark Mode</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        -->
+
+            <!------------------------- Content ------------------------->
+            <div id="moblie-profile" class="container mt-4 mb-4 pb-4">
+                <img class="bg-dashboard" src="images/Rectangle/wave_2.svg" alt="">
+                <div class="row">
+
+                    <div class="col-lg-12">
+
+                        <div class="accordion mb-4" id="accordionExample">
+                            <div class="card border-0 shadow-theme rounded mb-3">
+                                <div class="card-header p-3 bg-white" id="headingOne">
+                                    <h6 class="mb-0">
+                                        <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            My Classroom
+                                        </a>
+                                    </h6>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body p-0 pt-1">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">การพัฒนาเว็บ PHP</li>
+                                            <li class="list-group-item">Programming</li>
+                                            <li class="list-group-item">การพัฒนาเว็บไซต์ HTML & CSS</li>
+                                            <li class="list-group-item">โครงการ</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-0 shadow-theme rounded mb-3">
+                                <div class="card-header p-3 bg-white" id="headingTwo">
+                                    <h6 class="mb-0">
+                                        <a data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            Team
+                                        </a>
+                                    </h6>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body p-0 pt-1">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item clearfix">
+                                                <div class="float-left">
+                                                    <img src="images/img1.jpg" class="avatar mr-2">
+                                                    <span>Name</span>
+                                                </div>
+                                                <div class="float-right">
+                                                    <span class="text-success"><i class="fas fa-circle fa-sm"></i>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item clearfix">
+                                                <div class="float-left">
+                                                    <img src="images/img1.jpg" class="avatar mr-2">
+                                                    <span>Name</span>
+                                                </div>
+                                                <div class="float-right">
+                                                    <span class="text-secondary"><i class="fas fa-circle fa-sm"></i>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-0 shadow-theme rounded mb-3">
+                                <div class="card-header p-3 bg-white" id="headingThree">
+                                    <h6 class="mb-0">
+                                        <a data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            Award
+                                        </a>
+                                    </h6>
+                                </div>
+
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body p-0 pt-1">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">การพัฒนาเว็บ PHP</li>
+                                            <li class="list-group-item">Programming</li>
+                                            <li class="list-group-item">การพัฒนาเว็บไซต์ HTML & CSS</li>
+                                            <li class="list-group-item">โครงการ</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" type="button" class="btn btn-theme btn-block mb-5">
+                            <i class="fas fa-sign-out-alt"></i> logout
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!------------------------- Footer ------------------------->
+            <footer class="p-3 d-none d-xl-block">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <small> Copyright © 2020 Classroom. </small>
+                        </div>
+                        <div class="col-xl-6 text-right">
+                            <small> Designed by Piyawat Loekthanom </small>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!------------------------- Moblie-bar ------------------------->
+            <div class="d-block d-lg-none moblie-bar p-2">
+                <div class="container-fluid text-center">
+                    <div class="row row-cols-3">
+                        <div class="col">
+                            <a class="list-moblie" href="control.html">
+                                <i class="fas fa-home"></i>
+                                <small class="d-block">Home</small>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="list-moblie" href="#" data-toggle="modal" data-target="#JoinClassroom">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <small class="d-block">Join</small>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="mobile_profile.html" class="list-moblie active">
+                                <i class="fas fa-grip-lines"></i>
+                                <small class="d-block">Proflie</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!------------------------- Modal Join Classroom ------------------------->
+    <div class="modal fade" id="JoinClassroom" tabindex="-1" role="dialog" aria-labelledby="JoinClassroom"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="JoinClassroom">Join Class</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="form-row form-group">
+                            <div class="col-8">
+                                <input type="text" class="form-control" placeholder="code" required>
+                            </div>
+                            <div class="col-4">
+                                <button type="submit" class="btn btn-block btn-outline-theme">Join</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- owl_carousel core JavaScript -->
+    <script src="lib/owl_carousel/owl.carousel.min.js"></script>
+
+    <!-- Style core JavaScript -->
+    <script src="js/main.js"></script>
+
+    <!-- WOW -->
+    <script src="lib/wow/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+
+</body>
+
+</html>
