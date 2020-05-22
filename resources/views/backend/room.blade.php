@@ -493,8 +493,7 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                {{-- <form action="{{route('pretest.export', ['id' => $id->cls_id])}}" method="post" enctype="multipart/form-data" role="form"> --}}
-                <form action="" method="post" enctype="multipart/form-data" role="form">
+                <form action="{{route('pretest.export', ['id' => $id->cls_id])}}" method="post" enctype="multipart/form-data" role="form">
                     @csrf
                     <div class="modal-header">
                         <h5 class="modal-title" id="Export">Pretest Export</h5>
@@ -503,17 +502,13 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="form-row form-group">
-
-                            <div class="col-12">
-                                ค้นหาแบบสอบถาม
-                                <input list="encodings" value="" name="ptid" class="col-sm-6 custom-select custom-select-sm" placeholder="Search by name" required>
-                                <datalist id="encodings">
-                                    {{-- @foreach ($pretest as $pretests)
-                                        <option value="{{$pretests->pt_id}}.{{$pretests->pt_name}}">{{$pretests->pt_name}}</option>
-                                    @endforeach --}}
-                                </datalist>
-                            </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Pretest Select</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="choice">
+                                @foreach ($pretest as $pretests)
+                                    <option value="{{$pretests->pt_id}}.{{$pretests->pt_name}}">{{$pretests->pt_name}}</option>
+                                @endforeach
+                            </select>
                         </div>
 
                     </div>

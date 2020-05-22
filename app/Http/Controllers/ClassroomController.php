@@ -10,6 +10,7 @@ use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\Validator;
 use App\ClassroomContent;
 use App\ClassroomComment;
+use App\ClassroomPretest;
 use Carbon\Carbon;
 
 class ClassroomController extends Controller
@@ -54,8 +55,9 @@ class ClassroomController extends Controller
 
         //dd($post);
 
+        $pretest = ClassroomPretest::where('cls_id',$id->cls_id)->get();
 
-        return view('backend.room',compact('id','member','post','user','owner'));
+        return view('backend.room',compact('id','member','post','user','owner','pretest'));
 
     }
 

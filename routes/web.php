@@ -98,6 +98,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/pretest/{id}', 'ClassroomPretestController@csv_import')->name('pretest.import');
 
+    Route::post('/pretest/export/{id}', 'ClassroomPretestController@csv_export')->name('pretest.export');
+
     Route::get('/pretest/show/{id}', 'ClassroomPretestController@show')->name('pretest.show');
 
     Route::get('/exam/show/{id}', 'ClassroomPretestExamController@show')->name('exam.show');
