@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\ClassroomPretest;
 use Illuminate\Http\Request;
 use App\Imports\CsvImport;
+use App\Exports\CsvExport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\ClassroomPretestExam;
 use App\ClassroomPretestUser;
@@ -59,7 +60,14 @@ class ClassroomPretestController extends Controller
     }
 
     public function csv_export(Request $request){
-        echo 555;
-        dd($request);
+
+        list($pretestid, $pretestname) = explode('.', $request->choice);
+
+        // สำหรับแก้ปัญหาเปิดไฟล์ไม่ได้
+        ob_end_clean(); // this
+        ob_start(); // and this
+
+        return Excel::download(new CsvExport($pretestid,$pretestname), 'score.xlsx');
+
     }
 }
