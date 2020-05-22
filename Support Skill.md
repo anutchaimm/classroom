@@ -2234,3 +2234,11 @@ git commit -m "first commit"
 git remote add origin https://github.com/anutchaimm/firstproject.git
 git push -u origin master
 git push --force origin master
+
+ถ้าเจอ Error
+
+Github remote permission denied
+ให้ไปที่
+Windows Credential Managers.
+
+และเซ็ต Username Password ใหม่ ที่ Github
