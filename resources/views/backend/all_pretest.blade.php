@@ -16,7 +16,7 @@
                             </a>
 
                         @if (session('status'))
-                            <div class="alert alert-success" role="alert">
+                            <div class="alert alert-success mt-2" role="alert">
                                 {{ session('status') }}
                             </div>
                         @endif
@@ -38,7 +38,12 @@
                                             <span class="badge badge-primary">Total: {{$item->score ?? 0}} / {{$item->pt_number_of_exam}}</span>
                                         </div>
                                         <div class="col-12 col-lg-12 text-right mt-2">
-                                            <a href="{{route('exam.show', ['id' => $item->pt_id])}}" role="button" class="btn btn-outline-theme text-primary">Start The Pretest</a>
+                                            {{-- ตรวจสอบว่าทำไปรึยัง --}}
+                                            @if ($item->checkalready == 0)
+                                                <a href="{{route('exam.show', ['id' => $item->pt_id])}}" role="button" class="btn btn-outline-theme text-primary mr-4">Start</a>
+                                            @else
+                                                <p class="text-success mr-4">Finish</p>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
