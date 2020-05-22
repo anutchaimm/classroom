@@ -1,0 +1,788 @@
+/* Extra small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 575.98px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+  .display-4 {
+    font-size: 30px !important;
+  }
+
+  /* --------------------------------------------------- Heading ----------------------------------------------------- */
+  /* --------------------------------------------------- Navbar ----------------------------------------------------- */
+
+  #tp-heading .navbar-brand {
+    color: #fff !important;
+    text-shadow: 0px 0px 15px #fff;
+  }
+  #tp-heading .navbar-brand i {
+    color: #fff !important;
+    text-shadow: 0px 0px 15px #fff;
+  }
+  #tp-heading .navbar-brand span {
+    color: #fff !important;
+    text-shadow: 0px 0px 15px #fff;
+  }
+  #tp-heading .navbar .navbar-toggler {
+    text-shadow: 0px 0px 15px #fff;
+  }
+  #tp-heading #h-content {
+    margin-top: 50px !important;
+  }
+  #tp-heading .h-rectangle {
+    top: -1150px !important;
+    right: -600px !important;
+  }
+
+  #tp-heading .modal .modal-header {
+    color: var(--blue-theme) !important;
+  }
+
+  #tp-heading .list-group-item a {
+    color: var(--blue-theme) !important;
+    font-weight: 200;
+  }
+  #h-content h1 {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 700;
+  }
+  #h-content .text-left {
+    margin-bottom: 3rem !important;
+  }
+  #h-content .btn.btn-blue {
+    background-color: #fff !important;
+    border: 1px solid #fff;
+    color: var(--blue-theme);
+    padding: 0.5rem 2rem !important;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 600;
+  }
+
+  /* --------------------------------------------------- Definition ----------------------------------------------------- */
+
+  #definition {
+    margin-top: 0rem !important;
+  }
+
+  #definition img {
+    display: none;
+  }
+
+  #definition .card {
+    position: absolute;
+    top: 0px !important;
+    left: 0px !important;
+    text-align: center !important;
+  }
+
+  /* --------------------------------------------------- Process ----------------------------------------------------- */
+
+  #process-h {
+    margin: 2.5rem 0 !important;
+  }
+
+  #process {
+    position: relative;
+    padding: 0rem 0 !important;
+    margin: 0 0 !important;
+    margin-bottom: 2.5rem !important;
+  }
+
+  #process-R {
+    position: relative;
+    padding: 0rem 0 !important;
+    margin: 0 0 !important;
+    margin-bottom: 2.5rem !important;
+  }
+  #process .p-rectangle {
+    position: absolute;
+    top: 0;
+    right: -1400px !important;
+    z-index: -10;
+  }
+
+  #process-R .d-rectangle {
+    position: absolute;
+    top: 0;
+    left: -1400px !important;
+    z-index: -10;
+  }
+
+  #process-R .card {
+    position: static !important;
+    top: none !important;
+    right: none !important;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  #process .card {
+    position: static !important;
+    top: none !important;
+    right: none !important;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  #process .card .card-title {
+    font-weight: 400;
+  }
+
+  #process .text-right h1,
+  #process-R .text-left h1 {
+    font-size: 20px !important;
+    font-weight: 700;
+  }
+
+  #process .text-right p,
+  #process-R .text-left p {
+    font-size: 16px !important;
+    font-weight: 200;
+  }
+
+  /* --------------------------------------------------- Alignment ----------------------------------------------------- */
+
+  #alignment .blockquote h2 {
+    font-size: 20px !important;
+  }
+  #alignment .blockquote-footer {
+    font-size: 15px !important;
+  }
+
+  /* --------------------------------------------------- Speciality ----------------------------------------------------- */
+
+  #speciality {
+    margin: 2.5rem 0 !important;
+  }
+  #speciality .mt-5 {
+    margin-top: 0rem !important;
+  }
+
+  /* --------------------------------------------------- Sign in ----------------------------------------------------- */
+
+  #sign-in .h-rectangle {
+    display: none;
+  }
+  #sign-in .card {
+    position: relative;
+    margin-top: 0rem !important;
+    margin-bottom: 2rem !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+  #sign-in .footer-card {
+    display: none;
+  }
+
+  /* --------------------------------------------------- Dashboard ----------------------------------------------------- */
+  html,
+  body#dashboard {
+    overflow-x: hidden !important;
+  }
+  #content .card_bg {
+    height: 200px !important;
+  }
+  #content .card_heading .card-body {
+    height: 200px !important;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+  .display-4 {
+    font-size: 30px !important;
+  }
+
+  /* --------------------------------------------------- Heading ----------------------------------------------------- */
+  /* --------------------------------------------------- Navbar ----------------------------------------------------- */
+
+  #tp-heading .navbar-brand {
+    color: #fff !important;
+    text-shadow: 0px 0px 15px #fff;
+  }
+  #tp-heading .navbar-brand i {
+    color: #fff !important;
+    text-shadow: 0px 0px 15px #fff;
+  }
+  #tp-heading .navbar-brand span {
+    color: #fff !important;
+    text-shadow: 0px 0px 15px #fff;
+  }
+  #tp-heading .navbar .navbar-toggler {
+    text-shadow: 0px 0px 15px #fff;
+  }
+  #tp-heading #h-content {
+    margin-top: 50px !important;
+  }
+  #tp-heading {
+    overflow: hidden;
+  }
+  #tp-heading .h-rectangle {
+    top: -900px !important;
+    right: -600px !important;
+  }
+
+  #tp-heading .modal .modal-header {
+    color: var(--blue-theme) !important;
+  }
+
+  #tp-heading .list-group-item a {
+    color: var(--blue-theme) !important;
+    font-weight: 200;
+  }
+  #h-content h1 {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 700;
+  }
+  #h-content .text-left {
+    margin-bottom: 3rem !important;
+  }
+  #h-content .btn.btn-blue {
+    background-color: #fff !important;
+    border: 1px solid #fff;
+    color: var(--blue-theme);
+    padding: 0.5rem 2rem !important;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 600;
+  }
+
+  /* --------------------------------------------------- Definition ----------------------------------------------------- */
+
+  #definition {
+    position: relative;
+    margin-top: 2.5rem !important;
+    margin-bottom: 14rem !important;
+  }
+
+  #definition img {
+    display: none;
+  }
+
+  #definition .card {
+    position: static;
+    top: 0px !important;
+    left: 0px !important;
+    text-align: center !important;
+  }
+
+  /* --------------------------------------------------- Process ----------------------------------------------------- */
+
+  #process-h {
+    margin: 2.5rem 0 !important;
+  }
+
+  #process {
+    position: relative;
+    padding: 0rem 0 !important;
+    margin: 0 0 !important;
+    margin-bottom: 2.5rem !important;
+  }
+
+  #process-R {
+    position: relative;
+    padding: 0rem 0 !important;
+    margin: 0 0 !important;
+    margin-bottom: 2.5rem !important;
+  }
+  #process .p-rectangle {
+    position: absolute;
+    top: 0;
+    right: -1200px !important;
+    z-index: -10;
+  }
+
+  #process-R .d-rectangle {
+    position: absolute;
+    top: 0;
+    left: -1200px !important;
+    z-index: -10;
+  }
+
+  #process-R .card {
+    position: static !important;
+    top: none !important;
+    right: none !important;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  #process .card {
+    position: static !important;
+    top: none !important;
+    right: none !important;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  #process .card .card-title {
+    font-weight: 400;
+  }
+
+  #process .text-right h1,
+  #process-R .text-left h1 {
+    font-size: 20px !important;
+    font-weight: 700;
+  }
+
+  #process .text-right p,
+  #process-R .text-left p {
+    font-size: 16px !important;
+    font-weight: 200;
+  }
+
+  /* --------------------------------------------------- Alignment ----------------------------------------------------- */
+
+  #alignment .blockquote h2 {
+    font-size: 20px !important;
+  }
+  #alignment .blockquote-footer {
+    font-size: 15px !important;
+  }
+
+  /* --------------------------------------------------- Speciality ----------------------------------------------------- */
+
+  #speciality {
+    margin: 2.5rem 0 !important;
+  }
+  #speciality .mt-5 {
+    margin-top: 0rem !important;
+  }
+
+  /* --------------------------------------------------- Sign in ----------------------------------------------------- */
+
+  #sign-in .h-rectangle {
+    display: none;
+  }
+  #sign-in .card {
+    position: relative;
+    margin-top: 0rem !important;
+    margin-bottom: 2rem !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+  #sign-in .footer-card {
+    display: none;
+  }
+  /* --------------------------------------------------- Dashboard ----------------------------------------------------- */
+  html,
+  body#dashboard {
+    overflow-x: hidden !important;
+  }
+  #content .card_bg {
+    height: 200px !important;
+  }
+  #content .card_heading .card-body {
+    height: 200px !important;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+  .display-4 {
+    font-size: 30px !important;
+  }
+
+  /* --------------------------------------------------- Heading ----------------------------------------------------- */
+  /* --------------------------------------------------- Navbar ----------------------------------------------------- */
+  /*
+    #tp-heading .navbar-brand {
+      color: #fff !important;
+      text-shadow: 0px 0px 15px #fff;
+    }
+    #tp-heading .navbar-brand i {
+      color: #fff !important;
+      text-shadow: 0px 0px 15px #fff;
+    }
+    #tp-heading .navbar-brand span {
+      color: #fff !important;
+      text-shadow: 0px 0px 15px #fff;
+    }
+    */
+  #tp-heading .navbar .navbar-toggler {
+    text-shadow: 0px 0px 15px #fff;
+  }
+  header#tp-heading {
+    position: relative;
+    height: auto !important;
+  }
+  #tp-heading #h-content {
+    margin-top: 0px !important;
+    padding: 5rem 0;
+  }
+  #tp-heading {
+    overflow: hidden;
+  }
+  #tp-heading .h-rectangle {
+    top: -1200px !important;
+    right: -900px !important;
+  }
+
+  #tp-heading .modal .modal-header {
+    color: var(--blue-theme) !important;
+  }
+
+  #tp-heading .list-group-item a {
+    color: var(--blue-theme) !important;
+    font-weight: 200;
+  }
+
+  #h-content h1 {
+    font-size: 46px;
+    font-weight: 100;
+  }
+  #h-content .text-left {
+    margin-bottom: 3rem !important;
+  }
+
+  /* --------------------------------------------------- Definition ----------------------------------------------------- */
+
+  #definition {
+    position: relative;
+    margin-top: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
+
+  #definition .card {
+    position: absolute;
+    top: 50px !important;
+    left: -40px;
+  }
+  /* --------------------------------------------------- Process ----------------------------------------------------- */
+
+  #process-h {
+    margin: 2.5rem 0 !important;
+  }
+
+  #process {
+    position: relative;
+    padding: 0rem 0 !important;
+    margin: 0 0 !important;
+    margin-bottom: 2.5rem !important;
+  }
+
+  #process-R {
+    position: relative;
+    padding: 0rem 0 !important;
+    margin: 0 0 !important;
+    margin-bottom: 2.5rem !important;
+  }
+  #process .p-rectangle {
+    position: absolute;
+    top: 0;
+    right: -1200px !important;
+    z-index: -10;
+  }
+
+  #process-R .d-rectangle {
+    position: absolute;
+    top: 0;
+    left: -1200px !important;
+    z-index: -10;
+  }
+
+  #process-R .card {
+    position: static !important;
+    top: none !important;
+    right: none !important;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  #process .card {
+    position: static !important;
+    top: none !important;
+    right: none !important;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  #process .card .card-title {
+    font-weight: 400;
+  }
+
+  #process .text-right h1,
+  #process-R .text-left h1 {
+    font-size: 20px !important;
+    font-weight: 700;
+  }
+
+  #process .text-right p,
+  #process-R .text-left p {
+    font-size: 16px !important;
+    font-weight: 200;
+  }
+
+  /* --------------------------------------------------- Alignment ----------------------------------------------------- */
+
+  #alignment .blockquote h2 {
+    font-size: 20px !important;
+  }
+  #alignment .blockquote-footer {
+    font-size: 15px !important;
+  }
+
+  /* --------------------------------------------------- Speciality ----------------------------------------------------- */
+
+  #speciality {
+    margin: 2.5rem 0 !important;
+  }
+  #speciality .mt-5 {
+    margin-top: 0rem !important;
+  }
+
+  /* --------------------------------------------------- Sign in ----------------------------------------------------- */
+
+  #sign-in .h-rectangle {
+    display: none;
+  }
+  #sign-in .card {
+    position: relative;
+    margin-top: 0rem !important;
+    margin-bottom: 2rem !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+  #sign-in .footer-card {
+    display: none;
+  }
+
+  /* --------------------------------------------------- Dashboard ----------------------------------------------------- */
+  html,
+  body#dashboard {
+    overflow-x: hidden !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+  .display-4 {
+    font-size: 42px !important;
+  }
+
+  /* --------------------------------------------------- Heading ----------------------------------------------------- */
+  /* --------------------------------------------------- Navbar ----------------------------------------------------- */
+  header#tp-heading {
+    position: relative;
+    height: auto !important;
+  }
+
+  #tp-heading {
+    overflow: hidden;
+  }
+
+  #tp-heading #h-content {
+    margin-top: 20px !important;
+    padding: 10rem 0;
+  }
+
+  #tp-heading .h-rectangle {
+    top: -1000px !important;
+    right: -800px !important;
+  }
+
+  #h-content h1 {
+    font-size: 62px;
+  }
+
+  /* --------------------------------------------------- Definition ----------------------------------------------------- */
+
+  #definition {
+    position: relative;
+    margin-top: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
+  /* --------------------------------------------------- Process ----------------------------------------------------- */
+
+  #process-h {
+    margin: 2.5rem 0 !important;
+  }
+
+  #process {
+    position: relative;
+    padding: 0rem 0 !important;
+    margin: 0 0 !important;
+    margin-bottom: 2.5rem !important;
+  }
+
+  #process-R {
+    position: relative;
+    padding: 0rem 0 !important;
+    margin: 0 0 !important;
+    margin-bottom: 2.5rem !important;
+  }
+  #process .p-rectangle {
+    position: absolute;
+    top: 0;
+    right: -1200px !important;
+    z-index: -10;
+  }
+
+  #process-R .d-rectangle {
+    position: absolute;
+    top: 0;
+    left: -1200px !important;
+    z-index: -10;
+  }
+
+  #process-R .card {
+    position: static !important;
+    top: none !important;
+    right: none !important;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  #process .card {
+    position: static !important;
+    top: none !important;
+    right: none !important;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  #process .card .card-title {
+    font-weight: 400;
+  }
+
+  /* --------------------------------------------------- Alignment ----------------------------------------------------- */
+
+  #alignment .blockquote h2 {
+    font-size: 20px !important;
+  }
+  #alignment .blockquote-footer {
+    font-size: 15px !important;
+  }
+
+  /* --------------------------------------------------- Speciality ----------------------------------------------------- */
+
+  #speciality {
+    margin: 2.5rem 0 !important;
+  }
+  #speciality .mt-5 {
+    margin-top: 0rem !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1590px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  .display-4 {
+    font-size: 42px !important;
+  }
+
+  /* --------------------------------------------------- Heading ----------------------------------------------------- */
+  /* --------------------------------------------------- Navbar ----------------------------------------------------- */
+  header#tp-heading {
+    position: relative;
+    height: auto !important;
+  }
+
+  #tp-heading {
+    overflow: hidden;
+  }
+
+  #tp-heading #h-content {
+    margin-top: 20px !important;
+    padding: 10rem 0;
+  }
+
+  #tp-heading .h-rectangle {
+    top: -1000px !important;
+    right: -800px !important;
+  }
+
+  #h-content h1 {
+    font-size: 62px;
+  }
+
+  /* --------------------------------------------------- Definition ----------------------------------------------------- */
+
+  #definition {
+    position: relative;
+    margin-top: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
+  /* --------------------------------------------------- Process ----------------------------------------------------- */
+
+  #process-h {
+    margin: 2.5rem 0 !important;
+  }
+
+  #process {
+    position: relative;
+    padding: 0rem 0 !important;
+    margin: 0 0 !important;
+    margin-bottom: 2.5rem !important;
+  }
+
+  #process-R {
+    position: relative;
+    padding: 0rem 0 !important;
+    margin: 0 0 !important;
+    margin-bottom: 2.5rem !important;
+  }
+  #process .p-rectangle {
+    position: absolute;
+    top: 0;
+    right: -1000px !important;
+    z-index: -10;
+  }
+
+  #process-R .d-rectangle {
+    position: absolute;
+    top: 0;
+    left: -1000px !important;
+    z-index: -10;
+  }
+
+  #process-R .card {
+    position: static !important;
+    top: none !important;
+    right: none !important;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  #process .card {
+    position: static !important;
+    top: none !important;
+    right: none !important;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  #process .card .card-title {
+    font-weight: 400;
+  }
+
+  /* --------------------------------------------------- Alignment ----------------------------------------------------- */
+
+  #alignment .blockquote h2 {
+    font-size: 20px !important;
+  }
+  #alignment .blockquote-footer {
+    font-size: 15px !important;
+  }
+
+  /* --------------------------------------------------- Speciality ----------------------------------------------------- */
+
+  #speciality {
+    margin: 2.5rem 0 !important;
+  }
+  #speciality .mt-5 {
+    margin-top: 0rem !important;
+  }
+  /* --------------------------------------------------- Dashboard ----------------------------------------------------- */
+  html,
+  body#dashboard {
+    overflow-x: hidden !important;
+  }
+}

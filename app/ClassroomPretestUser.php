@@ -1,0 +1,20 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class ClassroomPretestUser extends Model
+{
+    protected $table = 'classroom_prestest_users';
+
+    protected $primaryKey = 'cpu_id';
+
+    protected $fillable = [
+        'cls_id',
+        'id',
+        'pt_id',
+        'cpu_score',
+    ];
+}
+
