@@ -15,4 +15,9 @@ class ClassroomPretest extends Model
         'pt_name',
         'pt_number_of_exam',
     ];
+
+    public function exam()
+    {
+        return $this->hasMany('App\ClassroomPretestExam', 'pt_id', 'pt_id');
+    }
 }

@@ -29,8 +29,6 @@
 <body id="dashboard">
 
     <div class="wrapper">
-
-
         <div id="content">
 
             <!------------------------- Content ------------------------->
@@ -39,103 +37,63 @@
                 <div class="card border-0 shadow-theme mb-3">
                     <div class="card-body ">
                         <h4 class="m-0">
-                            Placement Test
+                            {{$pretest->pt_name}}
                         </h4>
                     </div>
                 </div>
 
-                <div class="card border-0 shadow-theme mb-4">
-                    <div class="card-body ">
-                        <div class="row">
-                            <div class="col-10">
-                                <input type="text" class="form-control border-0 form-control-sm shadow-none" name=""
-                                    id="" placeholder="Add ข้อสอบ">
+                <form action="">
+                    @foreach ($pretest->exam as $key => $item)
+                        <div class="card border-0 shadow-theme mb-3">
+                            <div class="card-header clearfix bg-white">
+                                <h4 class="m-0 float-left">
+                                    <span class="badge badge-theme pr-3 pl-3 pt-2 pb-2">
+                                        {{$key+1}}
+                                    </span>
+                                    {{$item->exm_question}}
+                                </h4>
                             </div>
-                            <div class="col-2 text-right">
-                                <a type="button" name="" id="" class="btn btn-light btn-sm bg-transparent border-0">
-                                    <i class="fas fa-plus"></i>
-                                </a>
+                            <div class="card-body p-4">
+                                <div class="row">
+                                    <div class="col-12 card p-3 mb-1">
+                                        <div class="row mt-3">
+                                            <div class="col-lg-10">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="customRadio{{$item->exm_id}}1" name="customRadio{{$item->exm_id}}" class="custom-control-input" value="1" checked>
+                                                    <label class="custom-control-label" for="customRadio{{$item->exm_id}}1">1. {{$item->exm_choice_1}}</label>
+                                                </div>
+                                                <div class="custom-control custom-radio mt-3">
+                                                    <input type="radio" id="customRadio{{$item->exm_id}}2" name="customRadio{{$item->exm_id}}" class="custom-control-input" value="2">
+                                                    <label class="custom-control-label" for="customRadio{{$item->exm_id}}2">2. {{$item->exm_choice_2}}</label>
+                                                </div>
+                                                <div class="custom-control custom-radio mt-3">
+                                                    <input type="radio" id="customRadio{{$item->exm_id}}3" name="customRadio{{$item->exm_id}}" class="custom-control-input" value="3">
+                                                    <label class="custom-control-label" for="customRadio{{$item->exm_id}}3">3. {{$item->exm_choice_3}}</label>
+                                                </div>
+                                                <div class="custom-control custom-radio mt-3">
+                                                    <input type="radio" id="customRadio{{$item->exm_id}}4" name="customRadio{{$item->exm_id}}" class="custom-control-input" value="4">
+                                                    <label class="custom-control-label" for="customRadio{{$item->exm_id}}4">4. {{$item->exm_choice_4}}</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+
+                    <div class="card border-0 shadow-theme mb-4">
+                        <div class="card-body ">
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="card border-0 shadow-theme mb-3">
-                    <form action="">
-                        <div class="card-header clearfix bg-white">
-                            <h4 class="m-0 float-left">
-                                <span class="badge badge-theme pr-3 pl-3 pt-2 pb-2">
-                                    1
-                                </span>
-                                Test
-                            </h4>
-                            <div class="float-right">
-                                <a type="button" name="" id="" class="btn btn-light btn-sm bg-transparent border-0" data-toggle="modal" data-target="#editModal">
-                                    <i class="far fa-edit"></i>
-                                </a>
-                                <a type="button" name="" id="" data-toggle="modal" data-target="#delModal"
-                                    class="btn btn-light btn-sm bg-transparent border-0">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card-body p-4">
-                            <div class="row">
-                                <div class="col-12 card p-3 mb-1">
-                                    <div class="row">
-                                        <div class="col-lg-10">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                <label class="custom-control-label" for="customCheck1">
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 text-right">
-                                            <a type="button" name="" id=""
-                                                class="btn btn-light btn-sm bg-transparent border-0">
-                                                <i class="far fa-trash-alt"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 card p-3 mb-1">
-                                    <div class="row">
-                                        <div class="col-lg-10">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                <label class="custom-control-label" for="customCheck2">
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 text-right">
-                                            <a type="button" name="" id=""
-                                                class="btn btn-light btn-sm bg-transparent border-0">
-                                                <i class="far fa-trash-alt"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 card p-3 mb-1">
-                                    <div class="row">
-                                        <div class="col-lg-10">
-                                            <input type="text" class="form-control border-0 form-control-sm shadow-none"
-                                                placeholder="Add option">
-                                        </div>
-                                        <div class="col-lg-2 text-right">
-                                            <a type="button" name="" id=""
-                                                class="btn btn-light btn-sm bg-transparent border-0">
-                                                <i class="fas fa-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                </form>
             </div>
+
 
             <!-- Modal edit -->
             <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
@@ -249,11 +207,7 @@
     <!-- Style core JavaScript -->
     <script src="{{asset('js/main.js')}}"></script>
 
-    <!-- WOW -->
-    <script src="{{asset('lib/wow/wow.min.js')}}"></script>
-    <script>
-        new WOW().init();
-    </script>
+
 
 </body>
 
