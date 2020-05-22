@@ -42,7 +42,8 @@
                     </div>
                 </div>
 
-                <form action="">
+                <form action="{{route('exam.update', ['id' => $pretest->pt_id])}}" method="post" enctype="multipart/form-data">
+                    @csrf
                     @foreach ($pretest->exam as $key => $item)
                         <div class="card border-0 shadow-theme mb-3">
                             <div class="card-header clearfix bg-white">
@@ -59,19 +60,19 @@
                                         <div class="row mt-3">
                                             <div class="col-lg-10">
                                                 <div class="custom-control custom-radio">
-                                                    <input type="radio" id="customRadio{{$item->exm_id}}1" name="customRadio{{$item->exm_id}}" class="custom-control-input" value="1" checked>
+                                                    <input type="radio" id="customRadio{{$item->exm_id}}1" name="customRadio[{{$item->exm_id}}]" class="custom-control-input" value="1" checked>
                                                     <label class="custom-control-label" for="customRadio{{$item->exm_id}}1">1. {{$item->exm_choice_1}}</label>
                                                 </div>
                                                 <div class="custom-control custom-radio mt-3">
-                                                    <input type="radio" id="customRadio{{$item->exm_id}}2" name="customRadio{{$item->exm_id}}" class="custom-control-input" value="2">
+                                                    <input type="radio" id="customRadio{{$item->exm_id}}2" name="customRadio[{{$item->exm_id}}]" class="custom-control-input" value="2">
                                                     <label class="custom-control-label" for="customRadio{{$item->exm_id}}2">2. {{$item->exm_choice_2}}</label>
                                                 </div>
                                                 <div class="custom-control custom-radio mt-3">
-                                                    <input type="radio" id="customRadio{{$item->exm_id}}3" name="customRadio{{$item->exm_id}}" class="custom-control-input" value="3">
+                                                    <input type="radio" id="customRadio{{$item->exm_id}}3" name="customRadio[{{$item->exm_id}}]" class="custom-control-input" value="3">
                                                     <label class="custom-control-label" for="customRadio{{$item->exm_id}}3">3. {{$item->exm_choice_3}}</label>
                                                 </div>
                                                 <div class="custom-control custom-radio mt-3">
-                                                    <input type="radio" id="customRadio{{$item->exm_id}}4" name="customRadio{{$item->exm_id}}" class="custom-control-input" value="4">
+                                                    <input type="radio" id="customRadio{{$item->exm_id}}4" name="customRadio[{{$item->exm_id}}]" class="custom-control-input" value="4">
                                                     <label class="custom-control-label" for="customRadio{{$item->exm_id}}4">4. {{$item->exm_choice_4}}</label>
                                                 </div>
                                             </div>

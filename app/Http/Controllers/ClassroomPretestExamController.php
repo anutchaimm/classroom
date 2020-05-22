@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ClassroomPretest;
+use App\ClassroomPretestExam;
 
 class ClassroomPretestExamController extends Controller
 {
@@ -19,5 +20,23 @@ class ClassroomPretestExamController extends Controller
 
       // dd($pretest);
         return view('backend.pretest', compact('pretest'));
+    }
+
+    public function update(Request $request,$id){
+        $users = auth()->user()->id;
+
+        $pretest = ClassroomPretestExam::where('pt_id',$id)->get();
+
+
+        foreach ($request->customRadio as $key => $value) {
+            echo $value. "=";
+
+            echo $pretest[$key-1]->exm_answer. "<br>";
+
+          //  if($value == )
+
+        }
+
+        dd($request);
     }
 }
