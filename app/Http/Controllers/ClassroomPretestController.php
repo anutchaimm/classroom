@@ -67,7 +67,9 @@ class ClassroomPretestController extends Controller
         ob_end_clean(); // this
         ob_start(); // and this
 
-        return Excel::download(new CsvExport($pretestid,$pretestname), 'score.xlsx');
+       // return Excel::download(new CsvExport($pretestid,$pretestname), 'score.xlsx');
+
+        return (new CsvExport($pretestid,$pretestname))->download('invoices.xlsx');
 
     }
 }

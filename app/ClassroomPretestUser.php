@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ClassroomPretestUser extends Model
 {
-    protected $table = 'classroom_prestest_users';
+    protected $table = 'classroom_pretest_users';
 
     protected $primaryKey = 'cpu_id';
 
