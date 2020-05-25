@@ -16,5 +16,9 @@ class ClassroomPretestUser extends Model
         'pt_id',
         'cpu_score',
     ];
+
+    public function profile(){
+        return $this->hasOne('App\Profile', 'user_id', 'id');
+    }
 }
 

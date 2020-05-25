@@ -20,4 +20,6 @@ class ClassroomPretestExam extends Model
         'exm_choice_4',
         'exm_answer',
     ];
+
+
 }

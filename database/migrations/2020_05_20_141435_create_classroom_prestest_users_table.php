@@ -13,7 +13,7 @@ class CreateClassroomPrestestUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('classroom_prestest_users', function (Blueprint $table) {
+        Schema::create('classroom_pretest_users', function (Blueprint $table) {
             $table->id('cpu_id');
             $table->foreignId('cls_id');
             $table->foreignId('id');
