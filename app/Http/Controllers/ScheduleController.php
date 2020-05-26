@@ -9,6 +9,7 @@ use App\Classroom;
 use App\User;
 use App\ClassroomDivision;
 use App\ClassroomDivisionUser;
+use App\ClassroomPretest;
 use App\ClassroomPretestUser;
 use App\ClassroomSchedule;
 use App\ClassroomUser;
@@ -590,9 +591,17 @@ class ScheduleController extends Controller
     public function generate(Request $request,$id){
         echo $id;
 
-        $member = ClassroomPretestUser::where('cls_id',$id)->get();
+        // "week" => "24"
+        // "radio" => "3"
+        $pt_id = ClassroomPretest::where('cls_id', $id)->value('pt_id');
+        echo $pt_id;
+        $member = ClassroomPretestUser::where('cls_id',$id)
+        ->where('pt_id',$pt_id)
+        ->get();
 
-        dd($request);
+
+        dd($member);
+       // dd($member->score);
 
     }
 }

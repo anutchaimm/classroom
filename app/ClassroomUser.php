@@ -27,4 +27,7 @@ class ClassroomUser extends Model
         return $this->hasOne('App\Classroom', 'cls_id', 'cls_id');
     }
 
+    public function score(){
+        return $this->hasMany('App\ClassroomPretestUser', 'id', 'user_id');
+    }
 }
