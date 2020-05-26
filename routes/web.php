@@ -106,6 +106,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/exam/update/{id}', 'ClassroomPretestExamController@update')->name('exam.update');
 
+    Route::post('/generate/{id}', 'ScheduleController@generate')->name('match.generate');
+
     Route::get('/test', function () {
         return view('backend.test');
     })->name('test');

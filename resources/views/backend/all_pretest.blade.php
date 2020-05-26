@@ -39,7 +39,7 @@
                                         </div>
                                         <div class="col-12 col-lg-12 text-right mt-2">
                                             {{-- ตรวจสอบว่าทำไปรึยัง --}}
-                                            @if ($item->checkalready == 0)
+                                            @if(is_null($item->score))
                                                 <a href="{{route('exam.show', ['id' => $item->pt_id])}}" role="button" class="btn btn-outline-theme text-primary mr-4">Start</a>
                                             @else
                                                 <p class="text-success mr-4">Finish</p>
@@ -69,7 +69,11 @@
                                 <div class="card-footer">
                                     <h4 class="text-primary">คะแนน {{($getscore)}} / {{$sumscore}}</h4>
                                 </div>
-                                    <input type="range" id="slider" min="0" max="100" value="{{($getscore * 100) / $sumscore}}">
+                                    @if($getscore != 0)
+                                    <input type="range" id="slider" min="0" max="100" value="{{(($getscore * 100) / $sumscore)}}">
+                                    @else
+                                    <input type="range" id="slider" min="0" max="100" value="{{0}}">
+                                    @endif
                             </div>
                         </div>
                     </div>

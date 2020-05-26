@@ -14,7 +14,6 @@ class ClassroomPretestExamController extends Controller
         // หา User ID
         $users = auth()->user()->id;
 
-
         // echo $id;
         //dd($id);
         $pretest = ClassroomPretest::where('pt_id',$id)
@@ -23,14 +22,11 @@ class ClassroomPretestExamController extends Controller
         }])->inRandomOrder()
         ->first();
 
-
-
-
         // foreach ($pretest->exam as $key => $value) {
         //     echo $value->exm_question ;
         // }
 
-    //  dd($pretest);
+      //dd($pretest);
         return view('backend.pretest', compact('pretest'));
     }
 
@@ -55,15 +51,17 @@ class ClassroomPretestExamController extends Controller
             }
         }
 
-        $clsid = ClassroomPretest::find($id)->value('cls_id');
+        // echo $id;
+        $clsid = ClassroomPretest::where('pt_id', $id)->first();
 
+        // dd($clsid);
         DB::beginTransaction();
 
         try{
             ClassroomPretestUser::updateOrCreate(
             // ตรวจสอบว่ามีมั้ย
             [
-                'cls_id' => $clsid,
+                'cls_id' =>  $clsid->cls_id,
                 'id' => $users,
                 'pt_id' => $id
             ],
@@ -71,10 +69,11 @@ class ClassroomPretestExamController extends Controller
                 'cpu_score' => $point
             ]);
             DB::commit();
-            return redirect()->route('pretest.show', ['id' => $clsid])->with('status', 'Data inserted sucessfully!!');
+
+            return redirect()->route('pretest.show', ['id' => $clsid->cls_id])->with('status', 'Data inserted sucessfully!!');
         } catch (\Exception $e) {
             DB::rollback();
-            return redirect()->route('pretest.show', ['id' => $clsid])->with('status', 'Data inserted Failed!!');
+            return redirect()->route('pretest.show', ['id' => $clsid->cls_id])->with('status', 'Data inserted Failed!!');
         }
 
     }

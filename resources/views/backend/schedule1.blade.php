@@ -31,7 +31,42 @@
 
         </div>
         <div class="col-xl-8 col-lg-8">
-
+            {{-- <div class="row">
+                        <div class="col owl-carousel owl-theme week_carousel">
+                            <div class="card mb-4 list-weeks active">
+                                <div class="card-body p-0">
+                                    <span class="text-uppercase">
+                                        <i class="far fa-calendar-alt fa-lg"></i>
+                                        week 1
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card mb-4 list-weeks">
+                                <div class="card-body p-0">
+                                    <span class="text-uppercase">
+                                        <i class="far fa-calendar-alt fa-lg"></i>
+                                        week 2
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card mb-4 list-weeks">
+                                <div class="card-body p-0">
+                                    <span class="text-uppercase">
+                                        <i class="far fa-calendar-alt fa-lg"></i>
+                                        week 3
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card mb-4 list-weeks">
+                                <div class="card-body p-0">
+                                    <span class="text-uppercase">
+                                        <i class="far fa-calendar-alt fa-lg"></i>
+                                        week 4
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> --}}
             <div class="card card_heading mb-4 border-0 shadow-theme">
                 @if($classroom->cls_img)
                 <img class="card_bg" src="{{asset('storage')}}/{{$classroom->cls_img}}">
@@ -52,7 +87,6 @@
                         : {{Auth::user()->profile->prf_firstname}} {{Auth::user()->profile->prf_lastname}}</h5>
                 </div>
             </div>
-
             @can ('update', $owner->profile)
                 <div class="row">
                     <div class="col owl-carousel owl-theme week_carousel">
@@ -69,6 +103,7 @@
                 </div>
             @endcan
             <div class="row">
+
                 {{-- Create Schedule --}}
                 <div class="col-xl-10 mx-auto">
                     <div class="accordion d-lg-block d-none" id="accordionPost">
@@ -148,7 +183,7 @@
                             </div>
                         </div>
                         <div class="card-body" id="item{{$division->div_id}}">
-                            <h4>Division: {{$division->div_name}}</h4>
+                            <h4>Disvision: {{$division->div_name}}</h4>
                             <ul class="list-group list-group-flush">
                                 @foreach ($division_member as $teammember)
                                     @if($teammember->div_id == $division->div_id)
@@ -427,7 +462,8 @@
     <!-- Modal Genarate -->
     <div class="modal fade" id="Genarate" tabindex="-1" role="dialog" aria-labelledby="GenarateLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <form action="{{route('match.generate', ['id' => $classroom->cls_id])}}" method="post" enctype="multipart/form-data" role="form">
+            {{-- <form action="{{route('match.generate', ['id' => $classroom->cls_id])}}" method="post" enctype="multipart/form-data" role="form"> --}}
+            <form action="" method="post" enctype="multipart/form-data" role="form">
                 @csrf
                 <div class="modal-content">
                     <div class="modal-header">
@@ -455,7 +491,7 @@
                                     <label class="custom-control-label" for="choice2">2. แบบสลับเลขลำดับคู่คี่</label>
                                 </div>
                                 <div class="custom-control custom-radio pt-3">
-                                    <input type="radio" id="choice3" name="radio" value ="3" class="custom-control-input" checked>
+                                    <input type="radio" id="choice3" name="radio" value ="3" class="custom-control-input">
                                     <label class="custom-control-label" for="choice3">3. แบบใช้คะแนนทดสอบก่อนเรียน (งูกินหาง) *</label>
                                 </div>
                                 <div class="custom-control custom-radio pt-3">
@@ -566,7 +602,7 @@
                     // $('#success_name').removeClass('d-none');
                     // $('#success_name').html(data.success);
                     // $('#fullname').html(data.name);
-                    $('#item' + data.id).replaceWith("<div class='card-body ' id='item" + data.id + "'><h4>Division: " + data.name + "</h4><p class='card-text pb-1'><i class='far fa-clock'></i> Friday 1</p><a href='#' ><h6 class='btn-link'><i class='fas fa-cog'></i> Setting</h6></a></div>");
+                    $('#item' + data.id).replaceWith("<div class='card-body ' id='item" + data.id + "'><h4>Disvision: " + data.name + "</h4><p class='card-text pb-1'><i class='far fa-clock'></i> Friday 1</p><a href='#' ><h6 class='btn-link'><i class='fas fa-cog'></i> Setting</h6></a></div>");
                     $('#myModal').modal('toggle');
                     //alert(data.id+' '+data.cls_id+' '+' '+data.name+' '+data.win+' '+data.draw+' '+data.lose);
                 },

@@ -30,16 +30,14 @@ class ClassroomPretestController extends Controller
 
             $createdate = Carbon::parse($pretests->created_at); // now date is a carbon instance
             $pretests->create_at = $createdate->isoFormat('LL');
-
-            $pretests->checkalready = ClassroomPretestUser::where('id', $users)
-            ->where('pt_id',$pretests->pt_id)
-            ->count();
         }
 
         $sumscore = ClassroomPretest::where('cls_id',$id)->sum('pt_number_of_exam');
 
         $getscore = ClassroomPretestUser::where('cls_id',$id)
         ->where('id',$users)->sum('cpu_score');
+
+
 
         return view('backend.all_pretest',compact('id', 'pretest','getscore','sumscore'));
     }

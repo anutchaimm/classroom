@@ -9,7 +9,9 @@ use App\Classroom;
 use App\User;
 use App\ClassroomDivision;
 use App\ClassroomDivisionUser;
+use App\ClassroomPretestUser;
 use App\ClassroomSchedule;
+use App\ClassroomUser;
 use Carbon\Carbon;
 use Symfony\Component\HttpKernel\Event\ResponseEvent;
 
@@ -583,5 +585,14 @@ class ScheduleController extends Controller
                 // return response()->json(['error' => 'เกิดข้อผิดพลาด '.now()], 500);
             }
         // }
+    }
+
+    public function generate(Request $request,$id){
+        echo $id;
+
+        $member = ClassroomPretestUser::where('cls_id',$id)->get();
+
+        dd($request);
+
     }
 }
